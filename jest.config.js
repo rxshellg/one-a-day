@@ -11,7 +11,7 @@ module.exports = {
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
     },
     roots: [
-      "<rootDir>/src"
+      "<rootDir>/"
     ],
     collectCoverageFrom: [
       "src/**/*.{js,jsx,ts,tsx}",
@@ -22,8 +22,8 @@ module.exports = {
     ],
     setupFilesAfterEnv: [],
     testMatch: [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+      "<rootDir>/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/frontend/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ],
     testEnvironment: "jsdom",
     transformIgnorePatterns: [

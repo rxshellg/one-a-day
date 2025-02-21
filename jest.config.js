@@ -3,7 +3,7 @@ module.exports = {
       '^.+\\.jsx?$': 'babel-jest',
       "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
       "^.+\\.(css|scss|sass)$": "jest-transform-css",
-      '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': '<rootDir>/config/jest/fileTransform.js',
+      "^.+\\.(jpg|jpeg|png|gif|svg|ttf|woff|woff2)$": "jest-transform-stub",
     },
     moduleNameMapper: {
       '\\.css$': 'jest-css-modules',

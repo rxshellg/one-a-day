@@ -1,0 +1,10 @@
+body {
+    background-color: #D9D9D9;
+    font-family: 'Lucida Console', Monaco, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

@@ -5,18 +5,32 @@ import './JokeOfTheDayCard.css'
 const JokeOfTheDayCard = () => {
     const [joke, setJoke] = useState("");
     const [loading, setLoading] = useState(false);
-  
-    const fetchJoke = async () => {
-      setLoading(true);
-      try {
-        const response = await fetch("https://v2.jokeapi.dev/joke/Any?type=single");
-        const data = await response.json();
-        setJoke(data.joke);
-      } catch (error) {
-        setJoke("Failed to load joke. Try again!");
+    
+    useEffect(() => {
+      const savedJoke = localStorage.getItem("jokeOfTheDay");
+      const savedDate = localStorage.getItem("jokeDate");
+      const today = new Date().toISOString().split("T")[0];
+    
+      if (savedJoke && savedDate === today) {
+        setJoke(savedJoke);
+      } else {
+        fetchJoke();
       }
-      setLoading(false);
-    };
+    }, []);
+
+    const fetchJoke = async () => {
+        setLoading(true);
+        try {
+          const response = await fetch("https://v2.jokeapi.dev/joke/Any?type=single");
+          const data = await response.json();
+          setJoke(data.joke);
+          localStorage.setItem("jokeOfTheDay", data.joke);
+          localStorage.setItem("jokeDate", new Date().toISOString().split("T")[0]);
+        } catch (error) {
+          setJoke("Failed to load joke. Try again!");
+        }
+        setLoading(false);
+      };
 
     const shareJoke = () => {
         if (navigator.share) {
@@ -28,11 +42,7 @@ const JokeOfTheDayCard = () => {
           navigator.clipboard.writeText(joke);
           alert("Joke copied to clipboard!");
         }
-      };
-  
-    useEffect(() => {
-      fetchJoke();
-    }, []);
+    };
   
     return (
         <div className="joke-container">

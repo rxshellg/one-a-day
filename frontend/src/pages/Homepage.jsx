@@ -1,6 +1,7 @@
 import NavBar from '../components/NavBar'
 import JokeOfTheDayCard from '../components/JokeOfTheDayCard';
 import NumberOfTheDayCard from '../components/NumberOfTheDayCard';
+import TodayInHistoryCard from '../components/TodayInHistoryCard';
 
 const Homepage = () => {
     return (
@@ -8,6 +9,7 @@ const Homepage = () => {
             <NavBar />
             <JokeOfTheDayCard />
             <NumberOfTheDayCard />
+            <TodayInHistoryCard />
         </>
     )
 }

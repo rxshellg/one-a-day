@@ -1,4 +1,5 @@
-import './ShareButton.css'
+import PropTypes from 'prop-types';
+import './ShareButton.css';
 
 const ShareButton = ({ action }) => {
     return (
@@ -7,5 +8,9 @@ const ShareButton = ({ action }) => {
         </button>
     )
 }
+
+ShareButton.propTypes = {
+    action: PropTypes.func.isRequired,
+};
 
 export default ShareButton;

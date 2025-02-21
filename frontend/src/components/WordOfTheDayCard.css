@@ -1,0 +1,31 @@
+.word-container {
+    padding: 1.5rem;
+    background-color: #86efac; /* Light green */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Right & bottom shadow */
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 28rem;
+    margin: auto;
+}
+  
+.word-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #065f46; /* Dark green */
+}
+  
+.word-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #047857; /* Deep green */
+    margin-bottom: 0.5rem;
+}
+  
+.word-definition {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: #065f46; /* Dark green */
+    margin-bottom: 1rem;
+}
+  

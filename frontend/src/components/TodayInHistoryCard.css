@@ -1,0 +1,23 @@
+.history-container {
+    padding: 1.5rem;
+    background-color: #fca5a5; /* Light red */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Right & bottom shadow */
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 28rem;
+    margin: auto;
+  }
+  
+  .history-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #7f1d1d; /* Dark red */
+  }
+  
+  .history-text {
+    font-size: 1.125rem;
+    font-weight: normal;
+    color: #991b1b; /* Deep red */
+    margin-bottom: 1rem;
+  }
